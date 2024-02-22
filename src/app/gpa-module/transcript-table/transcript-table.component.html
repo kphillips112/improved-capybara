@@ -1,0 +1,36 @@
+<app-transcript-form
+  (transcriptAdded)="onTranscriptAdded($event)"
+></app-transcript-form>
+<table>
+  <caption>
+    Spring 2024 Transcript
+  </caption>
+  <thead>
+    <tr>
+      <th>Course Code</th>
+      <th>Course Name</th>
+      <th>Letter Grade</th>
+      <th>Grade Points</th>
+      <th>Course Credits</th>
+      <th>Course Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transcript of transcriptArray">
+      <td>{{ transcript.code }}</td>
+      <td>{{ transcript.name }}</td>
+      <td>{{ transcript.grade }}</td>
+      <td>{{ transcript.gpa }}</td>
+      <td>{{ transcript.credits }}</td> 
+      <td>{{ transcript.type }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">Updated Credit Totals and GPA</td>
+      <td>4</td>
+      <td>15</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
